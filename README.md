@@ -13,7 +13,7 @@
 
 ```bash
 pip install -r requirements.txt
-python3 scripts/inspect.py "/path/to/document.pdf"
+python3 scripts/pdf_inspect.py "/path/to/document.pdf"
 ```
 
 Вывод — валидный JSON: `{filename, pages, metadata, text_content}`.

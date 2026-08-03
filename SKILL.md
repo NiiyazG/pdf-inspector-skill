@@ -26,7 +26,7 @@ description: >
 pip install -r requirements.txt   # или: pip install pymupdf
 
 # 2. Запуск
-python3 scripts/inspect.py "/path/to/document.pdf"
+python3 scripts/pdf_inspect.py "/path/to/document.pdf"
 ```
 
 ## Пример вывода (JSON)
@@ -58,12 +58,12 @@ pdf-inspector-skill/
 ├── README.md           # описание проекта
 ├── requirements.txt    # pymupdf
 └── scripts/
-    └── inspect.py      # основной скрипт
+    └── pdf_inspect.py  # основной скрипт (не inspect.py — затеняет stdlib inspect)
 ```
 
 ## Как это устроено
 
-`scripts/inspect.py` использует **PyMuPDF** (`fitz`):
+`scripts/pdf_inspect.py` использует **PyMuPDF** (`fitz`):
 1. Открывает PDF по переданному пути.
 2. Читает метаданные и счётчик страниц.
 3. Извлекает текст со всех страниц.
